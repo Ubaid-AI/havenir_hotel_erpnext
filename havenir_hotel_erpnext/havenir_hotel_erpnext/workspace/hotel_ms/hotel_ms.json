@@ -1,0 +1,160 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"lxer5iIxnO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Hotel MS</span>\",\"col\":12}},{\"id\":\"0A5pKVjOHU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rooms\",\"col\":3}},{\"id\":\"qeOtUYvkgp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Check In\",\"col\":3}},{\"id\":\"Hf0G0Oi2m5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Check Out\",\"col\":3}},{\"id\":\"iXQ0smwuw8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"4ubbjyXTDa\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}}]",
+ "creation": "2024-07-06 14:11:05.309656",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "organization",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Hotel MS",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setup",
+   "link_count": 9,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Room Type",
+   "link_count": 0,
+   "link_to": "Room Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rooms",
+   "link_count": 0,
+   "link_to": "Rooms",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Room Facility Type",
+   "link_count": 0,
+   "link_to": "Room Facility Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Check In",
+   "link_count": 0,
+   "link_to": "Hotel Check In",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Check Out",
+   "link_count": 0,
+   "link_to": "Hotel Check Out",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Guests",
+   "link_count": 0,
+   "link_to": "Hotel Guests",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Laundry Order",
+   "link_count": 0,
+   "link_to": "Hotel Laundry Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Management Settings",
+   "link_count": 0,
+   "link_to": "Hotel Management Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Payment Entry",
+   "link_count": 0,
+   "link_to": "Hotel Payment Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-08-26 15:50:45.415888",
+ "modified_by": "Administrator",
+ "module": "Havenir Hotel Erpnext",
+ "name": "Hotel MS",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Hotel Manager"
+  },
+  {
+   "role": "Hotel Reservation User"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Rooms",
+   "link_to": "Rooms",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Check In",
+   "link_to": "Hotel Check In",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Check Out",
+   "link_to": "Hotel Check Out",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Hotel MS"
+}
