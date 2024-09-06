@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "autoname": "naming_series:",
  "creation": "2020-01-29 14:39:12.726257",
  "doctype": "DocType",
@@ -6,41 +7,74 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
+  "is_corporate",
+  "guest_information_section",
+  "first_name",
   "guest_name",
-  "cnic",
-  "column_break_3",
-  "passport_no",
+  "gender",
+  "postal_code",
+  "column_break_vfptb",
+  "middle_name",
   "date_of_birth",
+  "rating",
+  "column_break_n17xi",
+  "last_name",
+  "picture",
+  "picture_view",
   "details_section",
+  "vat_reg_no",
+  "commercial_reg_no",
   "id_card_front_attachment",
   "id_card_front_photo",
-  "contact_no",
+  "guest_type",
+  "id_type",
+  "id_series",
+  "passport_no",
+  "city",
+  "street",
+  "current_address",
   "column_break_8",
   "id_card_back_attachment",
   "id_card_back_photo",
-  "current_address",
+  "nationality",
+  "cnic",
   "permanent_address",
   "section_break_11",
-  "prefrences"
+  "contact_person_name",
+  "contact_no",
+  "work_place",
+  "column_break_5tyep",
+  "email",
+  "work_phone_no",
+  "section_break_hk5ew",
+  "prefrences",
+  "customer_group",
+  "territory",
+  "default_currency",
+  "default_price_list",
+  "language",
+  "customer"
  ],
  "fields": [
   {
    "allow_in_quick_entry": 1,
-   "description": "Format: XXXXX-XXXXXXX-X\nExample: 12345-1234567-1",
+   "depends_on": "eval:doc.is_corporate == 0",
    "fieldname": "cnic",
    "fieldtype": "Data",
    "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "CNIC",
-   "reqd": 1,
+   "label": "ID Number",
+   "mandatory_depends_on": "eval:doc.is_corporate == 0",
    "unique": 1
   },
   {
    "allow_in_quick_entry": 1,
+   "depends_on": "eval:doc.is_corporate == 0",
    "fieldname": "date_of_birth",
    "fieldtype": "Date",
-   "label": "Date of Birth"
+   "label": "Date of Birth",
+   "mandatory_depends_on": "eval:doc.is_corporate == 0"
   },
   {
    "fieldname": "prefrences",
@@ -53,17 +87,15 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Guest Name",
+   "label": "Full Name",
+   "read_only": 1,
    "reqd": 1
-  },
-  {
-   "fieldname": "column_break_3",
-   "fieldtype": "Column Break"
   },
   {
    "allow_in_quick_entry": 1,
    "fieldname": "passport_no",
    "fieldtype": "Data",
+   "hidden": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Passport No",
@@ -71,13 +103,13 @@
   },
   {
    "allow_in_quick_entry": 1,
-   "description": "Format: 92XXXXXXXXXX\nExample: 923217654321",
+   "description": "Format: 966XXXXXXXXXX\nExample: 9663217654321",
    "fieldname": "contact_no",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Contact No",
-   "reqd": 1,
+   "mandatory_depends_on": "eval:doc.is_corporate == 0",
    "unique": 1
   },
   {
@@ -85,18 +117,22 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.is_corporate == 0",
    "fieldname": "current_address",
    "fieldtype": "Small Text",
-   "label": "Current Address"
+   "label": "Current Address",
+   "mandatory_depends_on": "eval:doc.is_corporate == 0"
   },
   {
    "fieldname": "permanent_address",
    "fieldtype": "Small Text",
-   "label": "Permanent Address"
+   "label": "Permanent Address",
+   "mandatory_depends_on": "eval:doc.is_corporate == 1"
   },
   {
    "fieldname": "section_break_11",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
   },
   {
    "fieldname": "naming_series",
@@ -106,6 +142,7 @@
    "options": "GUEST-.YYYY.-.#####"
   },
   {
+   "depends_on": "eval:doc.is_corporate == 0",
    "fieldname": "id_card_front_photo",
    "fieldtype": "Image",
    "label": "ID Card Front Photo",
@@ -113,6 +150,7 @@
   },
   {
    "allow_in_quick_entry": 1,
+   "depends_on": "eval:doc.is_corporate == 0",
    "fieldname": "id_card_front_attachment",
    "fieldtype": "Attach Image",
    "in_preview": 1,
@@ -120,12 +158,14 @@
    "options": "image"
   },
   {
+   "depends_on": "eval:doc.is_corporate == 0",
    "fieldname": "id_card_back_attachment",
    "fieldtype": "Attach Image",
    "label": "ID Card Back",
    "options": "image"
   },
   {
+   "depends_on": "eval:doc.is_corporate == 0",
    "fieldname": "id_card_back_photo",
    "fieldtype": "Image",
    "label": "ID Card Back Photo",
@@ -134,14 +174,206 @@
   {
    "fieldname": "details_section",
    "fieldtype": "Section Break",
-   "label": "Details"
+   "label": "Verification"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 0",
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 0",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "mandatory_depends_on": "eval:doc.is_corporate == 0"
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 0",
+   "fieldname": "id_series",
+   "fieldtype": "Select",
+   "label": "ID Series",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "work_phone_no",
+   "fieldtype": "Phone",
+   "label": "Work Phone NO"
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 0",
+   "fieldname": "work_place",
+   "fieldtype": "Data",
+   "label": "Work Place"
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "label": "Picture"
+  },
+  {
+   "fieldname": "picture_view",
+   "fieldtype": "Image",
+   "hidden": 1,
+   "label": "Picture View",
+   "options": "picture"
+  },
+  {
+   "fieldname": "guest_information_section",
+   "fieldtype": "Section Break",
+   "label": "Information"
+  },
+  {
+   "fieldname": "column_break_vfptb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_n17xi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 0",
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "mandatory_depends_on": "eval:doc.is_corporate == 0",
+   "options": "Male\nFemale"
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 0",
+   "fieldname": "id_type",
+   "fieldtype": "Select",
+   "label": "ID Type",
+   "mandatory_depends_on": "eval:doc.is_corporate == 0",
+   "options": "National Id\nFamily ID\nPassport\nResident Permit\nGCC ID\nVisitor"
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 0",
+   "fieldname": "guest_type",
+   "fieldtype": "Select",
+   "label": "Guest Type",
+   "options": "Citizen\nForeigner\nGulf Citizen\nVisitor"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "label": "Nationality",
+   "options": "Country"
+  },
+  {
+   "fieldname": "column_break_5tyep",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hk5ew",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_corporate",
+   "fieldtype": "Check",
+   "label": "Is Corporate"
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 1",
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 1",
+   "fieldname": "vat_reg_no",
+   "fieldtype": "Data",
+   "label": "VAT Registration Number"
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 1",
+   "fieldname": "commercial_reg_no",
+   "fieldtype": "Data",
+   "label": "Commercial Registration No."
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 1",
+   "fieldname": "city",
+   "fieldtype": "Autocomplete",
+   "label": "City"
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 1",
+   "fieldname": "street",
+   "fieldtype": "Autocomplete",
+   "label": "Street"
+  },
+  {
+   "depends_on": "eval:doc.is_corporate == 1",
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "customer_group",
+   "options": "Customer Group"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Billing Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "default_price_list",
+   "fieldtype": "Link",
+   "label": "Default Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Link",
+   "label": "Language",
+   "options": "Language"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
   }
  ],
- "modified": "2020-07-29 12:02:04.025076",
+ "image_field": "picture",
+ "links": [],
+ "modified": "2024-09-06 12:41:39.445351",
  "modified_by": "Administrator",
  "module": "Havenir Hotel Erpnext",
  "name": "Hotel Guests",
  "name_case": "Title Case",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -184,6 +416,7 @@
  "search_fields": "guest_name,cnic,passport_no,contact_no",
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "title_field": "guest_name",
  "track_changes": 1
 }

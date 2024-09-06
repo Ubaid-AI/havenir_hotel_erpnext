@@ -49,5 +49,5 @@ def send_payment_sms(self):
     if sms_settings.sms_gateway_url:
         msg = 'Dear '
         msg += self.guest_name
-        msg += ''',\nWe are delighted that you have selected our hotel. The entire team at the Hotel PakHeritage welcomes you and trust your stay with us will be both enjoyable and comfortable.\nRegards,\nHotel Management'''
+        msg += ''',\nWe are delighted that you have selected our hotel. The entire team at the Hotel welcomes you and trust your stay with us will be both enjoyable and comfortable.\nRegards,\nHotel Management'''
         send_sms([self.contact_no], msg=msg)

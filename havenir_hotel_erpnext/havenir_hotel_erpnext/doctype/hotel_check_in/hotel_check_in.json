@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "autoname": "naming_series:",
  "creation": "2020-01-29 14:57:03.679302",
  "doctype": "DocType",
@@ -9,18 +10,31 @@
   "column_break_2",
   "title",
   "naming_series",
-  "guest_id",
   "guest_photo_attachment",
+  "reservation_type",
   "check_in",
-  "company",
   "column_break_7",
   "posting_date",
-  "passport_no",
-  "cnic",
-  "contact_no",
+  "reservation_status",
+  "check_out",
   "column_break_13",
+  "company",
+  "visit_purpose",
+  "period_nights",
+  "column_break_og1on",
+  "reservation_source",
+  "rental_type",
+  "guest_section",
+  "contact_no",
+  "guest_id",
+  "column_break_butve",
   "guest_name",
   "guest_photo",
+  "column_break_y7czi",
+  "id_type",
+  "column_break_3z466",
+  "cnic",
+  "passport_no",
   "room_details_section",
   "rooms",
   "total_amount",
@@ -115,7 +129,7 @@
    "default": "now",
    "fieldname": "posting_date",
    "fieldtype": "Date",
-   "label": "Posting Date",
+   "label": "Reservation Date",
    "read_only": 1,
    "reqd": 1
   },
@@ -123,7 +137,7 @@
    "fetch_from": "guest_id.cnic",
    "fieldname": "cnic",
    "fieldtype": "Data",
-   "label": "CNIC",
+   "label": "ID Number",
    "read_only": 1
   },
   {
@@ -185,13 +199,85 @@
    "print_hide": 1,
    "remember_last_selected_value": 1,
    "reqd": 1
+  },
+  {
+   "fieldname": "reservation_type",
+   "fieldtype": "Select",
+   "label": "Reservation Type",
+   "options": "Single\nGroup"
+  },
+  {
+   "fieldname": "reservation_status",
+   "fieldtype": "Select",
+   "label": "Reservation Status",
+   "options": "Unconfirmed\nConfirmed"
+  },
+  {
+   "fieldname": "visit_purpose",
+   "fieldtype": "Link",
+   "label": "Visit Purpose",
+   "options": "Visit purpose",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reservation_source",
+   "fieldtype": "Link",
+   "label": "Reservation source",
+   "options": "Reservation Source",
+   "reqd": 1
+  },
+  {
+   "fieldname": "guest_section",
+   "fieldtype": "Section Break",
+   "label": "Guest"
+  },
+  {
+   "fieldname": "column_break_butve",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "guest_id.id_type",
+   "fieldname": "id_type",
+   "fieldtype": "Data",
+   "label": "ID Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_y7czi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_3z466",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Datetime",
+   "label": "Check Out"
+  },
+  {
+   "fieldname": "rental_type",
+   "fieldtype": "Select",
+   "label": "Rental Type",
+   "options": "Daily\nMonthly"
+  },
+  {
+   "fieldname": "column_break_og1on",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "period_nights",
+   "fieldtype": "Int",
+   "label": "Period (Nights)"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-05-03 13:52:44.433659",
+ "links": [],
+ "modified": "2024-09-05 17:47:23.757521",
  "modified_by": "Administrator",
  "module": "Havenir Hotel Erpnext",
  "name": "Hotel Check In",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -249,5 +335,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

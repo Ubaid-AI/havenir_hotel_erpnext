@@ -7,26 +7,27 @@ frappe.ui.form.on("Hotel Guests", {
   },
 
   validate: function(frm) {
-    if (frm.doc.cnic == undefined && frm.doc.passport_no == undefined) {
-      frappe.throw("Please enter CNIC or Passport Number");
+    // && frm.doc.passport_no == undefined
+    if (frm.doc.cnic == undefined ) {
+      frappe.throw("Please enter ID Number");
     }
 
-    if (frm.doc.cnic && frm.doc.cnic.length != 15) {
-      frm.doc.cnic = undefined;
-      frm.refresh_field("cnic");
-      frappe.msgprint("Please enter CNIC in the correct format");
-    } else {
-      if (frm.doc.cnic[5] != "-") {
-        frm.doc.cnic = undefined;
-        frm.refresh_field("cnic");
-        frappe.msgprint("Please enter CNIC in the correct format");
-      }
-      if (frm.doc.cnic[13] != "-") {
-        frm.doc.cnic = undefined;
-        frm.refresh_field("cnic");
-        frappe.msgprint("Please enter CNIC in the correct format");
-      }
-    }
+    // if (frm.doc.cnic && frm.doc.cnic.length != 15) {
+    //   frm.doc.cnic = undefined;
+    //   frm.refresh_field("cnic");
+    //   frappe.msgprint("Please enter CNIC in the correct format");
+    // } else {
+    //   if (frm.doc.cnic[5] != "-") {
+    //     frm.doc.cnic = undefined;
+    //     frm.refresh_field("cnic");
+    //     frappe.msgprint("Please enter CNIC in the correct format");
+    //   }
+    //   if (frm.doc.cnic[13] != "-") {
+    //     frm.doc.cnic = undefined;
+    //     frm.refresh_field("cnic");
+    //     frappe.msgprint("Please enter CNIC in the correct format");
+    //   }
+    // }
     // if (frm.doc.contact_no && frm.doc.contact_no.length != 12) {
     //   frm.doc.contact_no = undefined;
     //   frm.refresh_field("contact_no");

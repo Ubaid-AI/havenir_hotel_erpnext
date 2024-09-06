@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2024-09-05 15:20:35.924938",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "reservation_type",
+  "rental_type",
+  "column_break_9kuxs",
+  "status",
+  "check_in",
+  "column_break_jolvq",
+  "visit_purpose",
+  "check_out",
+  "column_break_yvpxw",
+  "reservation_source",
+  "external_res_no",
+  "units_section",
+  "guests_section"
+ ],
+ "fields": [
+  {
+   "fieldname": "reservation_type",
+   "fieldtype": "Select",
+   "label": "Reservation type",
+   "options": "Single\nGroup"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Unconfirmed\nConfirmed"
+  },
+  {
+   "fieldname": "visit_purpose",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Visit purpose",
+   "options": "Visit purpose",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reservation_source",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reservation Source",
+   "options": "Reservation Source",
+   "reqd": 1
+  },
+  {
+   "fieldname": "external_res_no",
+   "fieldtype": "Data",
+   "label": "External Res. No"
+  },
+  {
+   "fieldname": "rental_type",
+   "fieldtype": "Select",
+   "label": "Rental type",
+   "options": "Daily\nMonthly"
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Date",
+   "label": "Checkin date"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Date",
+   "label": "Checkout date"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "series ",
+   "options": "RS-.#####"
+  },
+  {
+   "fieldname": "column_break_9kuxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jolvq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yvpxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "units_section",
+   "fieldtype": "Section Break",
+   "label": "Unit(s)"
+  },
+  {
+   "fieldname": "guests_section",
+   "fieldtype": "Section Break",
+   "label": "Guest(s)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-05 15:25:57.629118",
+ "modified_by": "Administrator",
+ "module": "Havenir Hotel Erpnext",
+ "name": "Reservation",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

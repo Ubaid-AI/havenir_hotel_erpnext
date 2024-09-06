@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"lxer5iIxnO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Hotel MS</span>\",\"col\":12}},{\"id\":\"0A5pKVjOHU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rooms\",\"col\":3}},{\"id\":\"qeOtUYvkgp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Check In\",\"col\":3}},{\"id\":\"Hf0G0Oi2m5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Check Out\",\"col\":3}},{\"id\":\"iXQ0smwuw8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"4ubbjyXTDa\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}}]",
+ "content": "[{\"id\":\"lxer5iIxnO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Hotel MS</span>\",\"col\":12}},{\"id\":\"UV9U23KEMk\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Booked\",\"col\":4}},{\"id\":\"JL0E92qHIE\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Vacant\",\"col\":4}},{\"id\":\"Z6PFfmjWb6\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0A5pKVjOHU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rooms\",\"col\":3}},{\"id\":\"qeOtUYvkgp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Check In\",\"col\":3}},{\"id\":\"Hf0G0Oi2m5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Check Out\",\"col\":3}},{\"id\":\"QYm9g_kSIe\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"iXQ0smwuw8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Zgd6I31veq\",\"type\":\"card\",\"data\":{\"card_name\":\"Setups\",\"col\":4}}]",
  "creation": "2024-07-06 14:11:05.309656",
  "custom_blocks": [],
  "docstatus": 0,
@@ -10,16 +10,17 @@
  "icon": "organization",
  "idx": 0,
  "is_hidden": 0,
- "label": "Hotel MS",
+ "label": "Nazeel MS",
  "links": [
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Setup",
+   "label": "Hotel Block",
    "link_count": 9,
+   "link_to": "Hotel Block",
    "link_type": "DocType",
    "onboard": 0,
-   "type": "Card Break"
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -110,13 +111,91 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setups",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Room Type",
+   "link_count": 0,
+   "link_to": "Room Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Room Facility Type",
+   "link_count": 0,
+   "link_to": "Room Facility Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Guests",
+   "link_count": 0,
+   "link_to": "Hotel Guests",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Laundry Order",
+   "link_count": 0,
+   "link_to": "Hotel Laundry Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Management Settings",
+   "link_count": 0,
+   "link_to": "Hotel Management Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Payment Entry",
+   "link_count": 0,
+   "link_to": "Hotel Payment Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-08-26 15:50:45.415888",
+ "modified": "2024-09-03 14:23:39.545564",
  "modified_by": "Administrator",
  "module": "Havenir Hotel Erpnext",
- "name": "Hotel MS",
- "number_cards": [],
+ "name": "Nazeel MS",
+ "number_cards": [
+  {
+   "label": "Booked",
+   "number_card_name": "Booked Rooms"
+  },
+  {
+   "label": "Vacant",
+   "number_card_name": "Vacant Rooms"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
@@ -142,6 +221,13 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Dashboard",
+   "link_to": "Hotel",
+   "type": "Dashboard"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Check In",
    "link_to": "Hotel Check In",
    "stats_filter": "[]",
@@ -156,5 +242,5 @@
    "type": "DocType"
   }
  ],
- "title": "Hotel MS"
+ "title": "Nazeel MS"
 }

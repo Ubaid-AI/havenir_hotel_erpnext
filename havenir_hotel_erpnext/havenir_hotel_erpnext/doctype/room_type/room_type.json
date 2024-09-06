@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "autoname": "field:type",
  "creation": "2020-01-29 12:45:13.379092",
  "doctype": "DocType",
@@ -16,7 +17,7 @@
    "fieldname": "type",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Type",
+   "label": "Unit Type",
    "reqd": 1,
    "unique": 1
   },
@@ -28,26 +29,29 @@
    "fieldname": "price",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Price",
+   "label": "Rate (per Night)",
    "options": "Currency",
-   "precision": "2"
+   "precision": "2",
+   "reqd": 1
   },
   {
    "fieldname": "capacity",
    "fieldtype": "Int",
-   "label": "Capacity"
+   "label": "Single Beds"
   },
   {
    "fieldname": "extra_beds",
    "fieldtype": "Int",
-   "label": "Extra Beds"
+   "label": "Double Beds"
   }
  ],
- "modified": "2020-01-29 14:20:34.175184",
+ "links": [],
+ "modified": "2024-08-31 19:22:35.892374",
  "modified_by": "Administrator",
  "module": "Havenir Hotel Erpnext",
  "name": "Room Type",
  "name_case": "Title Case",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -99,5 +103,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }
