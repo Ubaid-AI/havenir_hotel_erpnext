@@ -31,7 +31,9 @@
   "section_break_jm8c1",
   "description",
   "item",
-  "item_group"
+  "item_group",
+  "check_in",
+  "check_out"
  ],
  "fields": [
   {
@@ -45,7 +47,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Unit Status",
-   "options": "Available\nChecked In\nReserved\nRoom Service",
+   "options": "Available\nChecked In\nReserved\nRoom Service\nMaintenance",
    "read_only": 1,
    "reqd": 1
   },
@@ -104,7 +106,6 @@
   {
    "fieldname": "image",
    "fieldtype": "Attach Image",
-   "hidden": 1,
    "label": "Image"
   },
   {
@@ -198,13 +199,23 @@
    "fieldtype": "Link",
    "label": "Item Group",
    "options": "Item Group"
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Datetime",
+   "label": "check in"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Datetime",
+   "label": "check out"
   }
  ],
  "icon": "calender",
  "image_field": "image",
  "links": [],
  "make_attachments_public": 1,
- "modified": "2024-09-06 17:08:31.753990",
+ "modified": "2024-11-30 19:20:18.512438",
  "modified_by": "Administrator",
  "module": "Havenir Hotel Erpnext",
  "name": "Rooms",

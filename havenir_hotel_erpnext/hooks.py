@@ -13,6 +13,10 @@ app_license = "MIT"
 
 # Includes in <head>
 # ------------------
+before_install = "havenir_hotel_erpnext.install.before_install"
+
+# After Install Hook
+after_install = "havenir_hotel_erpnext.install.create_custom_fields"
 
 fixtures = [{
   'dt' : 'Custom Field', 'filters':[

@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-24 18:17:17.733301",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "full_name",
+  "posting_date",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_session_test",
+  "due_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Session Test"
+  },
+  {
+   "fieldname": "parent_session_test",
+   "fieldtype": "Link",
+   "label": "Parent Session Test",
+   "options": "Session Test"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Data",
+   "label": "Due Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-24 18:18:25.324395",
+ "modified_by": "Administrator",
+ "module": "Havenir Hotel Erpnext",
+ "name": "Session Test",
+ "nsm_parent_field": "parent_session_test",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

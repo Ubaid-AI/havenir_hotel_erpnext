@@ -49,7 +49,7 @@ class HotelPaymentEntry(Document):
       payment_entry.paid_to = company.default_cash_account
       payment_entry.paid_from = company.default_receivable_account
       payment_entry.party_type = 'Customer'
-      payment_entry.party = 'Hotel Walk In Customer'
+      payment_entry.party = self.guest_name
       payment_entry.received_amount = self.amount_paid
       payment_entry.paid_amount = self.amount_paid
       payment_entry.remarks = 'Room ' + str(self.room)
@@ -74,7 +74,7 @@ class HotelPaymentEntry(Document):
         jv.append('accounts', {
                   'account': company.default_receivable_account,
                   'party_type': 'Customer',
-                  'party': 'Hotel Walk In Customer',
+                  'party': self.guest_name,
                   'debit_in_account_currency': self.amount_paid
               })
         # Entry For Cash Account

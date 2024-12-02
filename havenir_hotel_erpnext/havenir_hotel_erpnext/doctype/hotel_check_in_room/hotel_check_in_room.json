@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "creation": "2020-02-01 22:24:48.020303",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -6,6 +7,7 @@
  "field_order": [
   "room_no",
   "column_break_2",
+  "check_out",
   "room_type",
   "column_break_4",
   "price",
@@ -18,7 +20,8 @@
   "section_break_12",
   "extra_bed_issued",
   "column_break_14",
-  "details"
+  "details",
+  "guest_name"
  ],
  "fields": [
   {
@@ -44,10 +47,10 @@
    "label": "Guests Details"
   },
   {
+   "default": "1",
    "fieldname": "male",
    "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Male"
+   "label": "Adult(s)"
   },
   {
    "fieldname": "column_break_8",
@@ -56,8 +59,7 @@
   {
    "fieldname": "female",
    "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Female"
+   "label": "Children(s)"
   },
   {
    "fieldname": "column_break_10",
@@ -103,10 +105,27 @@
    "label": "Price",
    "options": "Currency",
    "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "check_out",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "<strong style=\"background-color: #83d8ef;\">Check Out</strong>"
+  },
+  {
+   "fieldname": "guest_name",
+   "fieldtype": "Data",
+   "label": "Guest Name"
   }
  ],
  "istable": 1,
- "modified": "2020-02-14 16:52:43.280719",
+ "links": [],
+ "modified": "2024-11-19 23:22:13.537642",
  "modified_by": "Administrator",
  "module": "Havenir Hotel Erpnext",
  "name": "Hotel Check In Room",
@@ -115,5 +134,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

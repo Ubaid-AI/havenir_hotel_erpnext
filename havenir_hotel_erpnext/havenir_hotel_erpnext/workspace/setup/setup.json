@@ -1,9 +1,8 @@
 {
  "charts": [],
- "content": "[{\"id\":\"ABoSyWIygE\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Setups</span>\",\"col\":12}},{\"id\":\"rNBjKSXpL0\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Block &amp; Floors</b></span>\",\"col\":12}},{\"id\":\"Mu3olgg3gQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"block\",\"col\":3}},{\"id\":\"NykZkf5YD2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Floors\",\"col\":3}},{\"id\":\"Pi_uOujrXJ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Units</b></span>\",\"col\":12}},{\"id\":\"pi0JLhDoNX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Type\",\"col\":3}},{\"id\":\"dz57K381fk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Amenities\",\"col\":3}},{\"id\":\"kU0flENXVj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Hall\",\"col\":3}},{\"id\":\"7PWEVKeOKw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Kitchen\",\"col\":3}},{\"id\":\"AA2YK5AF0w\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Manage Units\",\"col\":3}},{\"id\":\"qm1gTFNfQ2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reservation</b></span>\",\"col\":12}},{\"id\":\"A7zwSVd6E6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Visit purpose\",\"col\":3}},{\"id\":\"PjW63j0dPU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Reservation Source\",\"col\":3}},{\"id\":\"_NId5Ku1Yb\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Settings</b></span>\",\"col\":12}},{\"id\":\"SFY99w-fwL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Nazeel Settings\",\"col\":3}}]",
+ "content": "[{\"id\":\"ABoSyWIygE\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Setups</span>\",\"col\":12}},{\"id\":\"rNBjKSXpL0\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Block &amp; Floors</b></span>\",\"col\":12}},{\"id\":\"Mu3olgg3gQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"block\",\"col\":3}},{\"id\":\"NykZkf5YD2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Floors\",\"col\":3}},{\"id\":\"LtanN8hFrv\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Customer</b></span>\",\"col\":12}},{\"id\":\"a1ihA9FCiY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"Pi_uOujrXJ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Units</b></span>\",\"col\":12}},{\"id\":\"pi0JLhDoNX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Type\",\"col\":3}},{\"id\":\"dz57K381fk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Amenities\",\"col\":3}},{\"id\":\"kU0flENXVj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Hall\",\"col\":3}},{\"id\":\"7PWEVKeOKw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Kitchen\",\"col\":3}},{\"id\":\"AA2YK5AF0w\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Manage Units\",\"col\":3}},{\"id\":\"qm1gTFNfQ2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reservation</b></span>\",\"col\":12}},{\"id\":\"A7zwSVd6E6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Visit purpose\",\"col\":3}},{\"id\":\"PjW63j0dPU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Reservation Source\",\"col\":3}},{\"id\":\"HyLDOyDo3l\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Food and Laundry Items</b></span><span class=\\\"h2\\\"></span>\",\"col\":12}},{\"id\":\"8TATJ54vWT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Laundry Item\",\"col\":3}},{\"id\":\"zMIX05wz2a\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Food Item\",\"col\":3}},{\"id\":\"_NId5Ku1Yb\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Settings</b></span>\",\"col\":12}},{\"id\":\"SFY99w-fwL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Nazeel Settings\",\"col\":3}}]",
  "creation": "2024-08-31 18:03:13.699095",
  "custom_blocks": [],
- "custom_external_icon": "/private/files/gear.svg",
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -13,13 +12,13 @@
  "is_hidden": 0,
  "label": "Setup",
  "links": [],
- "modified": "2024-09-06 18:01:33.423266",
+ "modified": "2024-11-26 21:14:03.469754",
  "modified_by": "Administrator",
  "module": "Havenir Hotel Erpnext",
  "name": "Setup",
  "number_cards": [],
  "owner": "Administrator",
- "parent_page": "Nazeel MS",
+ "parent_page": "Hotel MS",
  "public": 1,
  "quick_lists": [],
  "roles": [],
@@ -30,6 +29,30 @@
    "doc_view": "List",
    "label": "Manage Units",
    "link_to": "Rooms",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Laundry Item",
+   "link_to": "Item",
+   "stats_filter": "[[\"Item\",\"item_group\",\"=\",\"Laundry\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Food Item",
+   "link_to": "Item",
+   "stats_filter": "[[\"Item\",\"item_group\",\"=\",\"Food\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Customer",
+   "link_to": "Hotel Guests",
    "stats_filter": "[]",
    "type": "DocType"
   },

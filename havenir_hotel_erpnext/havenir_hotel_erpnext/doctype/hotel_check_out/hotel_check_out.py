@@ -224,7 +224,8 @@ def create_sales_invoice(self, all_checked_out):
         sales_invoice_doc.discount_amount = 0
 
         sales_invoice_doc.customer = self.customer
-        sales_invoice_doc.check_in_id = self.check_in_id
+        sales_invoice_doc.custom_check_in_id = self.check_in_id
+        sales_invoice_doc.custom_check_out_id = self.name
         sales_invoice_doc.check_in_date = frappe.get_value(
             "Hotel Check In", self.check_in_id, "check_in"
         )
@@ -289,7 +290,7 @@ def create_sales_invoice(self, all_checked_out):
                 },
             )
         sales_invoice_doc.insert(ignore_permissions=True)
-        sales_invoice_doc.submit()
+        sales_invoice_doc.save()
     if all_checked_out == 1 or self.customer != "Hotel Walk In Customer":
         create_walk_in_invoice = 0
         for item in self.items:
@@ -302,10 +303,11 @@ def create_sales_invoice(self, all_checked_out):
             sales_invoice_doc.discount_amount = 0
 
             sales_invoice_doc.customer = "Hotel Walk In Customer"
-            sales_invoice_doc.check_in_id = self.check_in_id
+            sales_invoice_doc.custom_check_in_id = self.check_in_id
             sales_invoice_doc.check_in_date = frappe.get_value(
                 "Hotel Check In", self.check_in_id, "check_in"
             )
+            sales_invoice_doc.custom_check_out_id = self.name
             sales_invoice_doc.due_date = frappe.utils.data.today()
             sales_invoice_doc.debit_to = company.default_receivable_account
 
@@ -370,7 +372,7 @@ def create_sales_invoice(self, all_checked_out):
                 )
 
             sales_invoice_doc.insert(ignore_permissions=True)
-            sales_invoice_doc.submit()
+            sales_invoice_doc.save()
 
             # Creating Additional Payment Vouchers
             if self.total_pos_charges - self.total_payments > 0:
@@ -407,10 +409,11 @@ def create_sales_invoice(self, all_checked_out):
                 check_out_doc = frappe.get_doc("Hotel Check Out", check_out_name)
                 if sales_invoice_doc.customer == None:
                     sales_invoice_doc.customer = check_out_doc.customer
-                    sales_invoice_doc.check_in_id = check_out_doc.check_in_id
+                    sales_invoice_doc.custom_check_in_id = check_out_doc.check_in_id
                     sales_invoice_doc.check_in_date = frappe.get_value(
                         "Hotel Check In", self.check_in_id, "check_in"
                     )
+                    sales_invoice_doc.custom_check_out_id = self.name
                     sales_invoice_doc.due_date = frappe.utils.data.today()
                     sales_invoice_doc.debit_to = company.default_receivable_account
 
@@ -452,4 +455,4 @@ def create_sales_invoice(self, all_checked_out):
                 if self.food_discount != 0 and exclude_discount == 0:
                     sales_invoice_doc.discount_amount += self.food_discount
             sales_invoice_doc.insert(ignore_permissions=True)
-            sales_invoice_doc.submit()
+            sales_invoice_doc.save()

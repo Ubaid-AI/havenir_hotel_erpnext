@@ -25,8 +25,8 @@
   "reservation_source",
   "rental_type",
   "guest_section",
-  "contact_no",
   "guest_id",
+  "contact_no",
   "column_break_butve",
   "guest_name",
   "guest_photo",
@@ -186,7 +186,6 @@
   {
    "fieldname": "total_amount",
    "fieldtype": "Currency",
-   "hidden": 1,
    "label": "Total Amount",
    "options": "Currency",
    "read_only": 1
@@ -272,8 +271,13 @@
   }
  ],
  "is_submittable": 1,
- "links": [],
- "modified": "2024-09-05 17:47:23.757521",
+ "links": [
+  {
+   "link_doctype": "Hotel Check Out",
+   "link_fieldname": "check_in_id"
+  }
+ ],
+ "modified": "2024-11-23 01:03:43.806089",
  "modified_by": "Administrator",
  "module": "Havenir Hotel Erpnext",
  "name": "Hotel Check In",

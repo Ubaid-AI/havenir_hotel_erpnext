@@ -8,10 +8,28 @@
   },
   {
    "card": "Booked Rooms"
+  },
+  {
+   "card": "Check-IN"
+  },
+  {
+   "card": "Total Outgoing Bills"
+  },
+  {
+   "card": "Total Incoming Payment"
   }
  ],
  "charts": [
   {
+   "chart": "Status Wise Units",
+   "width": "Half"
+  },
+  {
+   "chart": "Profit and Loss",
+   "width": "Half"
+  },
+  {
+   "chart": "Outgoing Bills (Sales Invoice)",
    "width": "Half"
   }
  ],
@@ -22,7 +40,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2024-08-28 21:11:52.178684",
+ "modified": "2024-11-26 20:51:32.518504",
  "modified_by": "Administrator",
  "module": "Havenir Hotel Erpnext",
  "name": "Hotel",

@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "autoname": "naming_series:",
  "creation": "2020-02-03 12:33:42.936502",
  "doctype": "DocType",
@@ -13,6 +14,7 @@
   "section_break_4",
   "entry_type",
   "room",
+  "total_amount",
   "amount_paid",
   "advance",
   "column_break_6",
@@ -139,14 +141,22 @@
    "fieldtype": "Data",
    "label": "Contact No",
    "read_only": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "precision": "0"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-04-27 13:44:30.184028",
+ "links": [],
+ "modified": "2024-11-19 15:19:07.412712",
  "modified_by": "Administrator",
  "module": "Havenir Hotel Erpnext",
  "name": "Hotel Payment Entry",
  "name_case": "UPPER CASE",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -216,6 +226,7 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "title_field": "guest_name",
  "track_changes": 1
 }
